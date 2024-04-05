@@ -1,12 +1,8 @@
-from typing import List
-
 from sqlalchemy.exc import IntegrityError
 
 from app.db import engine, session_factory
 from app.models.characters import Characters, Base
 import requests
-from pydantic import BaseModel, model_validator
-import json
 
 def load_characters(anime_name: str):
     url = 'https://shikimori.one/api/graphql'
@@ -50,7 +46,6 @@ def create_db(data):
                 pass
             except IntegrityError:
                 session.rollback()
-
 
 
 if __name__=='__main__':

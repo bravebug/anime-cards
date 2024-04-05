@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "anime-cards"
+version = "0.1.0"
+description = "Anime Gacha"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "anime_cards"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.110.1"
+pydantic-settings = "^2.2.1"
+sqlalchemy = "^2.0.29"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
